@@ -10,7 +10,7 @@ character type ie. lowercase letters, uppercase letters, numbers, and/or special
 * JavaScript
 
 ## Website
-https://github.com/brendanjflewis/friendly-parakeet.git
+https://brendanjflewis.github.io/friendly-parakeet/
 
 ## Contribution
 * Made by Xander Rapstine
