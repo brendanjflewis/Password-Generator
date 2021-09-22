@@ -33,7 +33,7 @@ generateBtn.addEventListener("click", writePassword);
 // selected actions below are steps to create password
 function generatePassword(){
 
-  //created result variable with indeterminate for random password
+  // created result variable with indeterminate for random password
   var result = "";
 
   // prompt for user to choose password length
@@ -47,7 +47,7 @@ function generatePassword(){
     return generatePassword()
   }
 
-  // alerts user to choose number 8-128
+  // alerts user to choose number 8-128 if length isn't true to rule
   if(length<8||length>128){
     alert("Please choose a number between 8 and 128!");
 
@@ -88,7 +88,7 @@ function chooseCharacters(){
   } else {
   }
 
-  //if for not using at least one of the characters prompts user with an alert to choose character
+  //if for not using at least one of the characters. alert prompts user choose character
   if(!useUpper&&!useLower&&!useNumbers&&!useSpecial){
   alert("You must use at least one character to generate a password!")
   
