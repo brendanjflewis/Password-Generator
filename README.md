@@ -13,5 +13,5 @@ character type ie. lowercase letters, uppercase letters, numbers, and/or special
 
 
 ## Contribution
-Made by Xander Rapstine
-JavaScript updated and modified by Brendan Lewis
+* Made by Xander Rapstine
+* JavaScript updated and modified by Brendan Lewis
