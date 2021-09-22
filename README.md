@@ -15,3 +15,5 @@ https://brendanjflewis.github.io/friendly-parakeet/
 ## Contribution
 * Made by Xander Rapstine
 * JavaScript updated and modified by Brendan Lewis
+
+![site-image](https://user-images.githubusercontent.com/89174393/134287960-b02986b5-8912-4012-9243-696e68c33e76.jpg)
