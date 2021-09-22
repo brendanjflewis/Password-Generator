@@ -32,30 +32,42 @@ generateBtn.addEventListener("click", writePassword);
 
 // selected actions below are steps to create password
 function generatePassword(){
+
   //created result variable with indeterminate for random password
   var result = "";
+
   // prompt for user to choose password length
   var length = prompt("How characters would you like your password to contain?");
+
   // used if(isNaN(length)) to force an alert that tells user to input a number
   if(isNaN(length)){
     alert("You must input a number!");
-    // brings user back to beginning
-    return generatePassword()
-  }
-  // alerts user to choose number 8-128
-  if(length<8||length>128){
-    alert("Please choose a number between 8 and 128!");
+
     // brings user back to beginning
     return generatePassword()
   }
 
+  // alerts user to choose number 8-128
+  if(length<8||length>128){
+    alert("Please choose a number between 8 and 128!");
+
+    // brings user back to beginning
+    return generatePassword()
+  }
+
+
+// added force return for choosing characters instead of breaking loop and forcing user back to beginning. 
+// this holds the length the user selected. Goal was to make more user friendly.
+// and create one less incoveniant step. idk if this was asked, but it seemed like the right thing to do.
+var generatePassword = chooseCharacters();
+function chooseCharacters(){
   // var with confirm action to force user to choose their characters
   var useUpper = confirm("Use upper case letters?");
   var useLower = confirm("Use lower case letters?");
   var useNumbers = confirm("Use numbers?");
   var useSpecial = confirm("Use special characters?");
 
-  // if/else for each new var useCharacter
+  // if/else for each var useCharacter
   if(useUpper){
     confirmedCharacters += upper
   } else {
@@ -68,18 +80,22 @@ function generatePassword(){
 
   if(useNumbers){
     confirmedCharacters += numbers
-   } else {
-   }
+  } else {
+  }
 
   if(useSpecial){
     confirmedCharacters += special
   } else {
   }
 
-  //if for not using at least one of the characters and prompting user with an alert
+  //if for not using at least one of the characters prompts user with an alert to choose character
   if(!useUpper&&!useLower&&!useNumbers&&!useSpecial){
   alert("You must use at least one character to generate a password!")
+  
+  // return to choose character options
+  return chooseCharacters()
   }
+}
 
 
 // set results to select used characters at random from to the user selected/desired character length
